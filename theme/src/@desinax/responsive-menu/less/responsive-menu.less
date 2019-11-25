@@ -41,16 +41,17 @@
 @submenuItemBorderColor:    #8b696f;
 
 // Mobile menu
-@mobileBgColor:     #fff;
-@mobileColor:       #000;
+@mobileBgColor:     #000;
+@mobileColor:       #fff; //meny font color
 
 // Max menu
-@maxBgColor:                #fff;
+@maxBgColor:                #000;
 @maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
 @maxButtonColor:            #8b696f;
 @maxButtonClickedColor:     @navbarMenuButtonClickedColor;
-@maxButtonSubmenuBgColor:    #8b696f;
-@maxButtonSubmenuHoverBgColor: #947378;
+@maxButtonSubmenuBgColor:    #fff;
+@maxButtonSubmenuHoverBgColor: #fff;//pilens bakgrund
+@backgroundColorRedovisaDrop: #ebeaea;
 
 /**
  * Outer wrapper for menu
@@ -103,6 +104,7 @@ a.rm-button {
     .rm-button-face-1 {
         position: absolute;
         transition: color 0.10s ease;
+        margin-top: 0.5rem;
     }
 
     .rm-button-face-2 {
@@ -157,7 +159,7 @@ a.rm-button {
         white-space: nowrap;
         padding: 1em;
         outline: none;
-        font-size: 25px;
+        font-size: 20px;
 
         &:hover {
         }
@@ -176,7 +178,7 @@ a.rm-button {
         }
 
         li {
-            background-color: #ebeaea;
+            background-color: @backgroundColorRedovisaDrop;
          }
 
          // Submenu
@@ -333,7 +335,7 @@ a.rm-button {
 
         .rm-button {
             color: @maxButtonColor;
-            font-size: 30px;
+            font-size: 28px;
 
             &.rm-clicked {
                 //background-color: transparent;
@@ -372,6 +374,7 @@ a.rm-button {
 
         a:hover {
             text-decoration: underline;
+            color: @navbarItemHoverColor;
         }
 
         /* Button for submenu */
