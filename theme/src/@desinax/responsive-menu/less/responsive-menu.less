@@ -53,6 +53,9 @@
 @maxButtonSubmenuHoverBgColor: #fff;//pilens bakgrund
 @backgroundColorRedovisaDrop: #ebeaea;
 
+@fontNavbarLinks: 20px; // storlek på länkarna i navbaren
+@paddingNavbarLinks: 1em; // padding på länkarna i navbar 
+
 /**
  * Outer wrapper for menu
  */
@@ -157,9 +160,9 @@ a.rm-button {
         display: block;
         text-decoration: none;
         white-space: nowrap;
-        padding: 1em;
+        padding: @paddingNavbarLinks;
         outline: none;
-        font-size: 20px;
+        font-size: @fontNavbarLinks;
 
         &:hover {
         }

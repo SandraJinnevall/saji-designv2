@@ -59,35 +59,41 @@
 p {
     margin-bottom: 1.5rem; //magiska nummer 1 * 1.5
     line-height: 1.5;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: @fontP;
+    color: @fontColorP;
 }
 
 h1 {
     margin-bottom: 3rem; //magiska nummer 2 * 24
-    font-family: 'Lora', serif;
+    font-family: @fontRubrik;
     line-height: 1.2632;
+    color: @fontColorh1;
 }
 
 h2 {
     margin-bottom: 3rem; //magiska nummer
-    font-family: 'Lora', serif;
+    font-family: @fontRubrik;
     line-height: 1.6;
+    color: @fontColorRubrik;
 }
 
 h3 {
     margin-bottom: 3rem; //magiska nummer
-    font-family: 'Lora', serif;
+    font-family: @fontRubrik;
     line-height: 1.714;
+    color: @fontColorRubrik;
 }
 
 h4 {
     margin-bottom: 3rem; //magiska nummer
     line-height: 2;
+    color: @fontColorRubrik;
+    font-family: @fontRubrik;
 }
 
 h1::first-letter {
   font-size: 150%;
-  color: #dd4952;
+  color: @h1ColorFirst;
 }
 
 .site-logo {
@@ -95,9 +101,9 @@ h1::first-letter {
 }
 
 .site-logo-text {
-    font-size: 20px;
+    font-size: @site-logo-textfont;
     text-transform: uppercase;
-    font-family: 'Lora', serif;
+    font-family: @fontNavbar;
 }
 
 .my-navbar {
@@ -107,11 +113,11 @@ h1::first-letter {
 .rm-default a {
    text-decoration: none;
    text-transform: uppercase;
-   font-family: 'Lora', serif;
+   font-family: @fontNavbar;
 }
 
 .toc a:hover {
-   color: #000;
+   color: @hoverLinks;
    text-decoration: underline;
 }
 
@@ -125,7 +131,7 @@ h1::first-letter {
  */
 
 .toc a {
-   color: #000;
+   color: @linkColor;
    text-decoration: none;
 }
 
@@ -142,23 +148,23 @@ h1::first-letter {
 }
 
 .breadcrumb-list a {
-   color: #000;
+   color: @linkColor;
    text-decoration: none;
 }
 
 .breadcrumb-list a:hover {
-   color: #000;
+   color: @hoverLinks;
    text-decoration: underline;
 }
 
 .next-previous a {
-   color: #000;
+   color: @linkColor;
    text-decoration: none;
    margin-bottom: 1.5rem;
 }
 
 .next-previous a:hover {
-   color: #000;
+   color: @hoverLinks;
    text-decoration: underline;
 }
 
@@ -183,6 +189,14 @@ h1::first-letter {
 
 main.region-main.has-sidebar-left.has-sidebar {
     width: 600px;
+}
+
+.article a {
+    color: @linkColor;
+}
+
+.article a:hover {
+    color: @hoverLinks;
 }
 
 /**
@@ -211,12 +225,12 @@ main.region-main.has-sidebar-left.has-sidebar {
  */
 
 .inner-wrap-header {
-    background-color: #241f32;
-    height: 4em;
+    background-color: @navbarbgColor;
+    height: @navbarHeight;
 }
 
 .inner-wrap-flash {
-    background-color: #342d47;
+    background-color: @flashbgColor;
 }
 
 .region-flash {
@@ -227,6 +241,14 @@ main.region-main.has-sidebar-left.has-sidebar {
    #desinax-vgrid.column(@columns);
    text-align: center;
    width: 100%;
+}
+
+.region-flash img {
+    visibility: @flashshow;
+}
+
+.outer-wrap-flash {
+    width: @outerFlashShow;
 }
 
 .region-header-col-1,
@@ -249,7 +271,7 @@ main.region-main.has-sidebar-left.has-sidebar {
 .region-header-col-2 {
     #desinax-vgrid.column(20);
     text-align: center;
-    color: #fff;
+    color: @navbarColorP;
 }
 /**
  * sidebar layout
@@ -260,12 +282,12 @@ main.region-main.has-sidebar-left.has-sidebar {
 
 
 .region-sidebar-right a {
-    color: #000;
+    color: @linkColor;
     text-decoration: none;
 }
 
 .region-sidebar-right a:hover {
-    color: #000;
+    color: @hoverLinks;
     text-decoration: underline;
 }
 
@@ -312,11 +334,11 @@ main.region-main.has-sidebar-left.has-sidebar {
 }
 
 .region-sidebar-left>.block a {
-   color: #000;
+   color: @linkColor;
 }
 
 .region-sidebar-left>.block a:hover {
-   color: #000;
+   color: @hoverLinks;
    text-decoration: underline;
 }
 
@@ -347,6 +369,22 @@ main.region-main.has-sidebar-left.has-sidebar {
     //border-top: 2px solid  @borderColor;
 }
 
+.footer-column-1 p,
+.footer-column-2 p,
+.footer-column-3 p {
+    color: @footerColorP;
+}
+
+.footer-column-1 h4,
+.footer-column-2 h4,
+.footer-column-3 h4 {
+    color: @footerColorh4;
+}
+
+.site-footer p {
+    color: @footerColorP;
+}
+
 .footer-column-2 {
     border-right: 1px solid  @borderColor;
 }
@@ -356,12 +394,7 @@ main.region-main.has-sidebar-left.has-sidebar {
 }
 
 .outer-wrap-footer {
-    background-color: #272135;
-    color: #000;
-}
-
-.inner-wrap-footer {
-    color: #fff;
+    background-color: @footerbgColor;
 }
 
 .region-footer>.block {

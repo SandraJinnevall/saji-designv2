@@ -5202,25 +5202,31 @@ p {
   margin-bottom: 1.5rem;
   line-height: 1.5;
   font-family: 'Source Sans Pro', sans-serif;
+  color: #333;
 }
 h1 {
   margin-bottom: 3rem;
   font-family: 'Lora', serif;
   line-height: 1.2632;
+  color: #333;
 }
 h2 {
   margin-bottom: 3rem;
   font-family: 'Lora', serif;
   line-height: 1.6;
+  color: #333;
 }
 h3 {
   margin-bottom: 3rem;
   font-family: 'Lora', serif;
   line-height: 1.714;
+  color: #333;
 }
 h4 {
   margin-bottom: 3rem;
   line-height: 2;
+  color: #333;
+  font-family: 'Lora', serif;
 }
 h1::first-letter {
   font-size: 150%;
@@ -5243,7 +5249,7 @@ h1::first-letter {
   font-family: 'Lora', serif;
 }
 .toc a:hover {
-  color: #000;
+  color: #333;
   text-decoration: underline;
 }
 .stylechooser {
@@ -5254,7 +5260,7 @@ h1::first-letter {
  * Side with sidebar layout
  */
 .toc a {
-  color: #000;
+  color: #333;
   text-decoration: none;
 }
 .toc {
@@ -5267,20 +5273,20 @@ h1::first-letter {
   list-style: none;
 }
 .breadcrumb-list a {
-  color: #000;
+  color: #333;
   text-decoration: none;
 }
 .breadcrumb-list a:hover {
-  color: #000;
+  color: #333;
   text-decoration: underline;
 }
 .next-previous a {
-  color: #000;
+  color: #333;
   text-decoration: none;
   margin-bottom: 1.5rem;
 }
 .next-previous a:hover {
-  color: #000;
+  color: #333;
   text-decoration: underline;
 }
 .previous {
@@ -5291,6 +5297,12 @@ h1::first-letter {
 }
 main.region-main.has-sidebar-left.has-sidebar {
   width: 600px;
+}
+.article a {
+  color: #333;
+}
+.article a:hover {
+  color: #333;
 }
 /**
  * "Hem" layout
@@ -5343,6 +5355,12 @@ main.region-main.has-sidebar-left.has-sidebar {
   text-align: center;
   width: 100%;
 }
+.region-flash img {
+  visibility: show;
+}
+.outer-wrap-flash {
+  width: 100%;
+}
 .region-header-col-1,
 .region-header-col-3 {
   display: inline;
@@ -5376,11 +5394,11 @@ main.region-main.has-sidebar-left.has-sidebar {
   margin-top: 20px;
 }
 .region-sidebar-right a {
-  color: #000;
+  color: #333;
   text-decoration: none;
 }
 .region-sidebar-right a:hover {
-  color: #000;
+  color: #333;
   text-decoration: underline;
 }
 .region-main {
@@ -5436,10 +5454,10 @@ main.region-main.has-sidebar-left.has-sidebar {
   border-right: 1px solid #dd4952;
 }
 .region-sidebar-left > .block a {
-  color: #000;
+  color: #333;
 }
 .region-sidebar-left > .block a:hover {
-  color: #000;
+  color: #333;
   text-decoration: underline;
 }
 .breadcrumb-list {
@@ -5463,6 +5481,19 @@ main.region-main.has-sidebar-left.has-sidebar {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
 }
+.footer-column-1 p,
+.footer-column-2 p,
+.footer-column-3 p {
+  color: #fff;
+}
+.footer-column-1 h4,
+.footer-column-2 h4,
+.footer-column-3 h4 {
+  color: #fff;
+}
+.site-footer p {
+  color: #fff;
+}
 .footer-column-2 {
   border-right: 1px solid #dd4952;
 }
@@ -5471,10 +5502,6 @@ main.region-main.has-sidebar-left.has-sidebar {
 }
 .outer-wrap-footer {
   background-color: #272135;
-  color: #000;
-}
-.inner-wrap-footer {
-  color: #fff;
 }
 .region-footer > .block {
   text-align: center;
