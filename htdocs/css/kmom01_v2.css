@@ -269,7 +269,7 @@ li {
     border-right: none;
   }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1210px) {
   .rm-navbar-max {
     visibility: visible;
   }

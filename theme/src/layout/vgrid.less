@@ -63,11 +63,30 @@ p {
     color: @fontColorP;
 }
 
+p a {
+    text-decoration: none;
+    color: @fontColorP;
+}
+
+p a:hover {
+    color: @hoverLinks;
+}
+
 h1 {
     margin-bottom: 3rem; //magiska nummer 2 * 24
     font-family: @fontRubrik;
     line-height: 1.2632;
     color: @fontColorh1;
+    border-bottom: none;
+}
+
+h1 a {
+    text-decoration: none;
+    color: @fontColorh1;
+}
+
+h1 a:hover {
+    color: @hoverLinks;
 }
 
 h2 {
@@ -82,6 +101,7 @@ h3 {
     font-family: @fontRubrik;
     line-height: 1.714;
     color: @fontColorRubrik;
+    border-bottom: none;
 }
 
 h4 {
@@ -89,6 +109,7 @@ h4 {
     line-height: 2;
     color: @fontColorRubrik;
     font-family: @fontRubrik;
+    border-bottom: none;
 }
 
 h1::first-letter {
@@ -129,6 +150,10 @@ h1::first-letter {
 /**
  * Side with sidebar layout
  */
+
+.has-sidebar-right > .article {
+    min-height: auto;
+}
 
 .toc a {
    color: @linkColor;
@@ -214,10 +239,10 @@ main.region-main.has-sidebar-left.has-sidebar {
    #desinax-vgrid.column(@columns * 2.93 / 4);
 }
 
-.left {
+.byline > .left {
     #desinax-vgrid.column(@columns * 1 / 4);
     #desinax-vgrid.push(2.4);
-    margin-top: 35px;
+    margin-top: 45px;
 }
 
 /**
@@ -234,7 +259,7 @@ main.region-main.has-sidebar-left.has-sidebar {
 }
 
 .region-flash {
-    margin-top: -23px;
+    margin-top: -21px;
 }
 
 .region-flash {
@@ -419,15 +444,16 @@ main.region-main.has-sidebar-left.has-sidebar {
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1210px) {
     .region-header-col-2 {
         display: none;
     }
-
     .rm-navbar-max {
       visibility: visible;
     }
+}
 
+@media screen and (max-width: 950px) {
     .region-flash {
       margin-top: 0px;
     }

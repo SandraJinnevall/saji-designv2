@@ -5086,7 +5086,7 @@ li {
     border-right: none;
   }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1210px) {
   .rm-navbar-max {
     visibility: visible;
   }
@@ -5188,7 +5188,6 @@ a.rm-button:active {
 a.rm-button .rm-button-face-1 {
   position: absolute;
   transition: color 0.1s ease;
-  margin-top: 0.5rem;
 }
 a.rm-button .rm-button-face-2 {
   position: relative;
@@ -5196,7 +5195,7 @@ a.rm-button .rm-button-face-2 {
   transition: color 0.1s ease;
 }
 a.rm-button.rm-clicked {
-  color: #8b696f;
+  color: #9FB129;
   background-color: transparent;
 }
 a.rm-button.rm-clicked .rm-button-face-1 {
@@ -5205,7 +5204,6 @@ a.rm-button.rm-clicked .rm-button-face-1 {
 a.rm-button.rm-clicked .rm-button-face-2 {
   z-index: 2;
   color: inherit;
-  font-size: 28px;
 }
 /**
  * Standard meny layout, valid for any subtype.
@@ -5215,7 +5213,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-default li li {
   display: block;
-  min-width: 50%;
+  min-width: 10em;
 }
 .rm-default a {
   display: block;
@@ -5223,7 +5221,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   white-space: nowrap;
   padding: 1em;
   outline: none;
-  font-size: 20px;
+  font-size: 24px;
 }
 .rm-default ul {
   position: absolute;
@@ -5234,7 +5232,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   left: 0;
 }
 .rm-default ul li {
-  background-color: #ebeaea;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
 }
 .rm-default ul ul {
   left: -9999px;
@@ -5248,12 +5246,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-desktop li {
   position: relative;
 }
-.rm-desktop li.rm-selected-parent,
-.rm-desktop li.rm-selected,
-.rm-desktop li.selected-parent,
-.rm-desktop li.selected {
-  color: inherit;
-}
 .rm-desktop li a:hover,
 .rm-desktop li.current-menu-item a {
   text-decoration: underline;
@@ -5264,6 +5256,8 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li a:hover {
   color: inherit;
+}
+.rm-desktop li:hover {
   background-color: inherit;
 }
 .rm-desktop li:hover > ul {
@@ -5280,9 +5274,9 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Menu layout for the mobile variant, usually for mobile screens.
  */
 .rm-mobile {
-  width: 70%;
+  width: 100%;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-  background-color: #000;
+  background-color: #444;
   color: #fff;
 }
 .rm-mobile a {
@@ -5307,9 +5301,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   position: relative;
   left: 0;
 }
-.rm-mobile li li {
-  border: none;
-}
 /**
  * Menu layout for the max variant, for mobile screens and complete menues.
  * Swipe from right by default.
@@ -5323,11 +5314,11 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   display: block;
 }
 .rm-max .rm-small .rm-button {
-  color: #8b696f;
-  font-size: 28px;
+  color: inherit;
+  font-size: 30px;
 }
 .rm-max .rm-small .rm-button.rm-clicked {
-  color: #8b696f;
+  color: #9FB129;
   position: fixed;
   top: 16px;
   right: 24px;
@@ -5339,12 +5330,12 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   z-index: 998;
   top: 0;
   transform: translateX(100%);
-  width: 50%;
-  max-width: 100%;
+  width: 500px;
+  max-width: 500px;
   height: 500px;
   overflow-y: auto;
   padding-top: 72px;
-  background-color: #000;
+  background-color: #131313;
   /* Color when menu item is clicked */
   /* Button for submenu */
   /* Style for submenu */
@@ -5357,12 +5348,11 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-max .rm-mobile a:hover {
   text-decoration: underline;
-  color: inherit;
 }
 .rm-max .rm-mobile .rm-submenu-button {
   float: right;
   box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
-  background-color: #fff;
+  background-color: #444;
   padding: 8px 24px;
   margin-right: 8px;
   margin-top: 10px;
@@ -5375,7 +5365,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-max .rm-mobile .rm-submenu-button:hover {
   text-decoration: none;
-  background-color: #fff;
+  background-color: #ccc;
 }
 .rm-max .rm-mobile li ul {
   padding-left: 8px;

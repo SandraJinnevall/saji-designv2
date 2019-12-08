@@ -7,7 +7,8 @@
 @navbarItemBgColor:         inherit; //#444;
 @navbarItemColor:           inherit;
 @navbarItemHoverColor:      inherit; //lighten(@navbarItemColor, 20%);
-@navbarItemHoverBgColor:    inherit; //#666;
+@navbarItemHoverBgColor:    @backgroundColorRedovisaDrop; //#666;
+@backgroundColorRedovisaDrop: inherit;
 
 // Menu item current/selected
 @navbarItemSelectedColor:       inherit;
@@ -30,31 +31,29 @@
 //@navbarMenuButtonHoverBorderColor:   #333;
 
 // The menu button clicked
-@navbarMenuButtonClickedColor:          #8b696f;
+@navbarMenuButtonClickedColor:          #9FB129;
 @navbarMenuButtonClickedBgColor:        @navbarMenuButtonHoverBgColor;
 //@navbarMenuButtonClickedBorderColor:    lime;
 
 // Submenu
 @submenuZIndex:             9999;
 @submenuBgColor:            @navbarItemBgColor;
-@submenuMinWidth:           50%;
-@submenuItemBorderColor:    #8b696f;
+@submenuMinWidth:           10em;
+@submenuItemBorderColor:    #eee;
 
 // Mobile menu
-@mobileBgColor:     #000;
-@mobileColor:       #fff; //meny font color
+@mobileBgColor:     #444;
+@mobileColor:       #fff;
 
 // Max menu
-@maxBgColor:                #000;
+@maxBgColor:                #131313;
 @maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
-@maxButtonColor:            #8b696f;
+@maxButtonColor:            inherit;
 @maxButtonClickedColor:     @navbarMenuButtonClickedColor;
-@maxButtonSubmenuBgColor:    #fff;
-@maxButtonSubmenuHoverBgColor: #fff;//pilens bakgrund
-@backgroundColorRedovisaDrop: #ebeaea;
-
-@fontNavbarLinks: 20px; // storlek på länkarna i navbaren
-@paddingNavbarLinks: 1em; // padding på länkarna i navbar 
+@maxButtonSubmenuBgColor:    #444;
+@maxButtonSubmenuHoverBgColor: #ccc;
+@fontNavbarLinks: 24px; //fontsize navbar
+@maxSize: 30px; //hamburgaremeny icon storlek
 
 /**
  * Outer wrapper for menu
@@ -107,7 +106,6 @@ a.rm-button {
     .rm-button-face-1 {
         position: absolute;
         transition: color 0.10s ease;
-        margin-top: 0.5rem;
     }
 
     .rm-button-face-2 {
@@ -127,7 +125,6 @@ a.rm-button {
         .rm-button-face-2 {
             z-index: 2;
             color: inherit;
-            font-size: 28px;
         }
     }
 }
@@ -160,7 +157,7 @@ a.rm-button {
         display: block;
         text-decoration: none;
         white-space: nowrap;
-        padding: @paddingNavbarLinks;
+        padding: 1em;
         outline: none;
         font-size: @fontNavbarLinks;
 
@@ -181,7 +178,7 @@ a.rm-button {
         }
 
         li {
-            background-color: @backgroundColorRedovisaDrop;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
          }
 
          // Submenu
@@ -210,7 +207,7 @@ a.rm-button {
         &.rm-selected,
         &.selected-parent, // for selected descendants
         &.selected {
-            color: @navbarItemSelectedColor;
+            //color: @navbarItemSelectedColor;
             //background-color: @navbarItemSelectedBgColor;
         }
 
@@ -231,7 +228,7 @@ a.rm-button {
 
             &:hover {
                 color: @navbarItemHoverColor;
-                background-color: @navbarItemHoverBgColor;
+                //background-color: @navbarItemHoverBgColor;
             }
         }
 
@@ -240,7 +237,7 @@ a.rm-button {
         // Hover over a menu item and display submenu
         &:hover {
             //color: @navbarItemHoverColor;
-            //background-color: @navbarItemHoverBgColor;
+            background-color: @navbarItemHoverBgColor;
 
             // To display submenu(s)
             > ul {
@@ -267,7 +264,7 @@ a.rm-button {
  * Menu layout for the mobile variant, usually for mobile screens.
  */
 .rm-mobile {
-    width: 70%;
+    width: 100%;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
     background-color: @mobileBgColor;
     color: @mobileColor;
@@ -306,7 +303,7 @@ a.rm-button {
 
         // Menu item for submenu
         li {
-            border: none;
+            //border: none;
             //border-top: 1px solid @submenuItemBorderColor;
         }
 
@@ -338,7 +335,7 @@ a.rm-button {
 
         .rm-button {
             color: @maxButtonColor;
-            font-size: 28px;
+            font-size: @maxSize;
 
             &.rm-clicked {
                 //background-color: transparent;
@@ -358,8 +355,8 @@ a.rm-button {
         z-index: 998;
         top: 0;
         transform: translateX(100%);
-        width: 50%;
-        max-width: 100%;
+        width: 500px;
+        max-width: 500px;
         height: 500px;
         overflow-y: auto;
         padding-top: 72px;
@@ -377,7 +374,6 @@ a.rm-button {
 
         a:hover {
             text-decoration: underline;
-            color: @navbarItemHoverColor;
         }
 
         /* Button for submenu */
