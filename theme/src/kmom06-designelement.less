@@ -1,5 +1,5 @@
 /*!
- * Stylesheet for design kmom04 Dark.
+ * Stylesheet for design kmom06-designelement.
  *
  * This stylesheet is for the design course and kmom02 where we use LESS.
  */
@@ -39,6 +39,51 @@
 @import "@desinax/typographic-grid/less/typography-font-families.less";
 @import "@desinax/typographic-grid/less/typography-defaults.less";
 
+/**
+*Import the desinax/figure
+*/
+@import "@desinax/figure/less/figure.less";
+@import "@desinax/figure/less/codepen.less";
+@import "@desinax/figure/less/asciinema.less";
+
+// Enable style from the module and optinally add customized layout
+@maxContentWidth: 600px;
+figure.figure {
+    #desinax-figure.figure();
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
+}
+
+figure.figure {
+    @maxContentWidth: 600px;
+    #desinax-figure.figure(@maxContentWidth);
+}
+
+&.left,
+&.right {
+    @media screen {
+        @media (max-width: round(@maxContentWidth * 2 / 3)) {
+            &.w50 {
+                margin-left: 0;
+                margin-right: 0;
+                float: none;
+                img {
+                    width: @maxContentWidth * 2 / 3;
+                }
+            }
+        }
+    }
+}
+
 
 // Show the grid
 .hgrid .inner-wrap {
@@ -46,12 +91,14 @@
     #desinax-hgrid.showGrid(@gridImage);
 }
 
+
 /**
  * Base style to affect HTML elements on a general scale.
  */
 //@import "base/base.less";
 @import "base/base_kmom03.less";
 
+@import "layout/designelement.less";
 @import "@desinax/vertical-grid/less/grid.less";
 @import "layout/vgrid.less";
 // @columnWidth: 30;
@@ -104,7 +151,7 @@
 @hoverLinks: #E07E0A; //hover färg på länkarna.
 @navbarItemHoverColor: #E07E0A;
 @navbarColorP: #F4ECEB; //färg på länkarna i navbaren.
-@marginTopFlash: -21px; //flash marginTop
+@marginTopFlash: -14px; //flash marginTop
 
 // Magic number and base fontsize
 @magicNumber:  24px;  // 22px
@@ -113,7 +160,8 @@
 @site-logo-textfont: 24px;
 @fontNavbarLinks: 24px; // länkarna i navbaren
 @paddingNavbarLinks: 22px; // padding på länkarna i navbar
-@navbarHeight: 6.5em;
+@navbarHeight: 5.8em;
+@maxSize: 30px; //hamburgaremeny icon storlek
 
 @fontFamilyBody:    "sans-serif";
 @fontFamilyHeadings: "serif";
