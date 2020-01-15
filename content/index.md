@@ -1,6 +1,5 @@
 ---
 title: "Sandras me-sida"
-
 views:
     byline:
         region: main

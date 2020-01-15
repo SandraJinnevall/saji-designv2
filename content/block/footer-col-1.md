@@ -1,5 +1,4 @@
-#### KONTAKT
+KONTAKT
 
-Mail: sandra.jinnevall@gmail.com
-Facebook: Sandra Jinnevall    
+Mail: sandra.jinnevall@gmail.com Facebook: Sandra Jinnevall
 Github: SandraJinnevall

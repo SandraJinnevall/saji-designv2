@@ -1,5 +1,4 @@
-#### SKOLA
+SKOLA
 
-Vart? BTH.       
-Program? Webbprogrammering.
-Termin? 1.             
+Vart? BTH.
+Program? Webbprogrammering. Termin? 1.
